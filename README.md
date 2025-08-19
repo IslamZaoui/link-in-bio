@@ -8,11 +8,13 @@ This monorepo includes the following:
 
 ### Apps
 
-- [`api`](apps/api) - API server for link-in-bio
+- [`api`](apps/api) - Hono api server for link-in-bio
+- [`web`](apps/web) - sveltekit Web app for link-in-bio
 
 ### Packages
 
 - [`@repo/logger`](packages/logger) - Universal pino logger for link-in-bio
+- [`@repo/ui`](packages/ui) - Shared UI components for link-in-bio
 
 ### Utilities
 

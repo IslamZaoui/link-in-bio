@@ -20,5 +20,5 @@ export function createLogger(opt: LoggerOptions): pino.Logger {
 			level: opt.level,
 		},
 		opt.dev ? pinoPretty(prettyOptions) : undefined
-	)
+	);
 }

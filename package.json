@@ -9,7 +9,8 @@
 		"preview": "turbo preview",
 		"typecheck": "turbo typecheck",
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"ui": "bun --cwd packages/ui ui"
 	},
 	"devDependencies": {
 		"prettier": "^3.6.2",
@@ -25,7 +26,17 @@
 		"catalog": {
 			"typescript": "^5",
 			"bunup": "^0.9.3",
-			"hono": "^4.9.1"
+			"hono": "^4.9.1",
+			"vite": "^7.0.4"
+		},
+		"catalogs": {
+			"svelte": {
+				"@repo/ui": "workspace:*",
+				"@lucide/svelte": "^0.540.0",
+				"svelte": "^5.0.0",
+				"svelte-check": "^4.0.0",
+				"tailwindcss": "^4.0.0"
+			}
 		}
 	}
 }
