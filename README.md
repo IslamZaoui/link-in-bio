@@ -8,11 +8,11 @@ This monorepo includes the following:
 
 ### Apps
 
-- nothing for now
+- [`api`](apps/api) - API server for link-in-bio
 
 ### Packages
 
-- nothing for now
+- [`@repo/logger`](packages/logger) - Universal pino logger for link-in-bio
 
 ### Utilities
 
@@ -20,4 +20,6 @@ This monorepo has some additional tools already setup for you:
 
 - TypeScript for static type checking
 - Turbo for monorepo management
+- Vite for building the apps
+- Bunup for building the packages
 - Prettier for code formatting
