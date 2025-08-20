@@ -15,6 +15,7 @@ export default defineConfig({
 		}),
 		build({
 			entry: "src/index.ts",
+			outputDir: "build",
 			emptyOutDir: true,
 			external,
 		}),

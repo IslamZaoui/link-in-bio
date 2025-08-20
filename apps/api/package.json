@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "bun --bun vite",
 		"build": "bun --bun vite build",
-		"preview": "bun --bun dist/index.js",
+		"preview": "bun --bun build/index.js",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
