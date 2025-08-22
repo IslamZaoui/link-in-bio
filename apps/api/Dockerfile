@@ -9,23 +9,20 @@ RUN turbo prune api --docker
 FROM base AS install
 RUN mkdir -p /temp/dev
 COPY --from=builder /app/out/json /temp/dev/
-COPY --from=builder /app/out/bun.lock /temp/dev/
 RUN cd /temp/dev && bun install --frozen-lockfile
 
 RUN mkdir -p /temp/prod
 COPY --from=builder /app/out/json /temp/prod/
-COPY --from=builder /app/out/bun.lock /temp/prod/
 RUN cd /temp/prod && bun install --frozen-lockfile --production
 
 
 FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
 COPY --from=builder /app/out/full/ .
-RUN bun turbo run build --filter=api...
+RUN bun turbo build --filter=api...
 
 FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /app/apps/api/package.json .
 COPY --from=prerelease /app/apps/api/build ./build
 
 USER bun
