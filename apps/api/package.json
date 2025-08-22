@@ -9,13 +9,11 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"hono": "catalog:",
-		"hono-pino": "^0.10.2"
+		"hono": "catalog:"
 	},
 	"devDependencies": {
 		"@hono/vite-build": "^1.7.0",
 		"@hono/vite-dev-server": "^0.20.1",
-		"@repo/logger": "workspace:*",
 		"@types/bun": "latest",
 		"vite": "catalog:"
 	},

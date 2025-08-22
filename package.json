@@ -25,7 +25,6 @@
 		],
 		"catalog": {
 			"typescript": "^5",
-			"bunup": "^0.9.3",
 			"hono": "^4.9.1",
 			"vite": "^7.0.4"
 		},
